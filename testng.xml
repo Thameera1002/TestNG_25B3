@@ -3,15 +3,27 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
           name="/Users/thameera/Documents/Devstack/Automation/TestNG_25B3/src/test/java/SampleTestNGTest.java">
+        <groups>
+            <run>
+                <include name="smoke"/>
+<!--                <exclude name="regression"/>-->
+            </run>
+        </groups>
         <classes>
-            <class name="annotations.TestNGAnnotationTest">
-                <methods>
-                    <exclude name="testMethod1"/>
-                    <include name="testMethod2"/>
-                    <exclude name="testMethod3"/>
-                    <include name="testMethod4"/>
-                </methods>
-            </class>
+<!--&lt;!&ndash;            To Execute Entire class&ndash;&gt;-->
+<!--            <class name="SampleTestNGTest"/>-->
+
+<!--&lt;!&ndash;            To Execute Specific Methods&ndash;&gt;-->
+<!--            <class name="annotations.TestNGAnnotationTest">-->
+<!--                <methods>-->
+<!--                    <exclude name="testMethod1"/>-->
+<!--                    <include name="testMethod2"/>-->
+<!--                    <exclude name="testMethod3"/>-->
+<!--                    <include name="testMethod4"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+
+            <class name="groups.TestNGGroupTest"/>
         </classes>
     </test>
 </suite>
