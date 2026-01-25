@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true"
+    <test verbose="2" preserve-order="true" parallel="methods" thread-count="4"
           name="/Users/thameera/Documents/Devstack/Automation/TestNG_25B3/src/test/java/SampleTestNGTest.java">
-        <groups>
-            <run>
-                <include name="smoke"/>
-<!--                <exclude name="regression"/>-->
-            </run>
-        </groups>
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="smoke"/>-->
+<!--&lt;!&ndash;                <exclude name="regression"/>&ndash;&gt;-->
+<!--            </run>-->
+<!--        </groups>-->
         <classes>
 <!--&lt;!&ndash;            To Execute Entire class&ndash;&gt;-->
 <!--            <class name="SampleTestNGTest"/>-->
@@ -23,7 +23,10 @@
 <!--                </methods>-->
 <!--            </class>-->
 
-            <class name="groups.TestNGGroupTest"/>
+<!--&lt;!&ndash;            To execute Groups&ndash;&gt;-->
+<!--            <class name="groups.TestNGGroupTest"/>-->
+
+            <class name="parallel.ParallelExeTest"/>
         </classes>
     </test>
 </suite>
