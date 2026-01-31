@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-<!--    Class level parallel execution with 3 threads-->
-    <test verbose="2" preserve-order="true" parallel="classes" thread-count="3"
+<!--    Add custom listener-->
+    <listeners>
+        <listener class-name="listners.CustomListner"></listener>
+    </listeners>
+
+    <test verbose="2" preserve-order="true"
           name="/Users/thameera/Documents/Devstack/Automation/TestNG_25B3/src/test/java/SampleTestNGTest.java">
+<!--    &lt;!&ndash;    Class level parallel execution with 3 threads&ndash;&gt;-->
+<!--    <test verbose="2" preserve-order="true" parallel="classes" thread-count="3"-->
+<!--          name="/Users/thameera/Documents/Devstack/Automation/TestNG_25B3/src/test/java/SampleTestNGTest.java">-->
 <!--        Method level parallel execution with 4 threads-->
 <!--    <test verbose="2" preserve-order="true" parallel="methods" thread-count="4"-->
 <!--          name="/Users/thameera/Documents/Devstack/Automation/TestNG_25B3/src/test/java/SampleTestNGTest.java">-->
@@ -32,9 +39,14 @@
 
 <!--            Sample parallel execution-->
 <!--            <class name="parallel.ParallelExeTest"/>-->
-            <class name="parallel.A"/>
-            <class name="parallel.B"/>
-            <class name="parallel.C"/>
+
+<!--            Class level parallel execution classes-->
+<!--            <class name="parallel.A"/>-->
+<!--            <class name="parallel.B"/>-->
+<!--            <class name="parallel.C"/>-->
+
+<!--            Run Custom Listner Test-->
+            <class name="listners.CustomListnerTest"/>
         </classes>
     </test>
 </suite>

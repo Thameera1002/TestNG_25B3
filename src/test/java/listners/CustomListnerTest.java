@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(CustomListner.class) // Attach the custom listener to this test class
+//@Listeners(CustomListner.class) // Attach the custom listener to this test class
 public class CustomListnerTest {
 
 
