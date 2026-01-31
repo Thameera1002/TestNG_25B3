@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" parallel="methods" thread-count="4"
+<!--    Class level parallel execution with 3 threads-->
+    <test verbose="2" preserve-order="true" parallel="classes" thread-count="3"
           name="/Users/thameera/Documents/Devstack/Automation/TestNG_25B3/src/test/java/SampleTestNGTest.java">
+<!--        Method level parallel execution with 4 threads-->
+<!--    <test verbose="2" preserve-order="true" parallel="methods" thread-count="4"-->
+<!--          name="/Users/thameera/Documents/Devstack/Automation/TestNG_25B3/src/test/java/SampleTestNGTest.java">-->
 <!--        <groups>-->
 <!--            <run>-->
 <!--                <include name="smoke"/>-->
@@ -26,7 +30,11 @@
 <!--&lt;!&ndash;            To execute Groups&ndash;&gt;-->
 <!--            <class name="groups.TestNGGroupTest"/>-->
 
-            <class name="parallel.ParallelExeTest"/>
+<!--            Sample parallel execution-->
+<!--            <class name="parallel.ParallelExeTest"/>-->
+            <class name="parallel.A"/>
+            <class name="parallel.B"/>
+            <class name="parallel.C"/>
         </classes>
     </test>
 </suite>
