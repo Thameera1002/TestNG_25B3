@@ -2,7 +2,7 @@ package dependant;
 
 import org.testng.annotations.Test;
 
-public class DependsOnTest {
+public class DependsOnMethodsTest {
 
     @Test
     public void makeFoundation() {
