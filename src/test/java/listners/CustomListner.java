@@ -6,6 +6,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestListener;
 import reporter.ExtentReportManager;
+import utils.ThreadLocalWebDriverManager;
 
 import java.io.File;
 import java.io.IOException;
@@ -36,6 +37,7 @@ public class CustomListner implements ITestListener {
     @Override
     public void onTestFailure(org.testng.ITestResult result) {
         System.out.println("Test Failed: " + result.getName());
+            driver = ThreadLocalWebDriverManager.getDriver();
             String base64Screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
             ExtentReportManager.logFailWithScreenshot("Test Failed: " + result.getName(), base64Screenshot);
             //ExtentReportManager.logFail("Test Failed: " + result.getName());
