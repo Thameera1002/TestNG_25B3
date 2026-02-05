@@ -4,8 +4,14 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-//@Listeners(CustomListner.class) // Attach the custom listener to this test class
+@Listeners(CustomListner.class) // Attach the custom listener to this test class
 public class CustomListnerTest {
+
+    @Test
+    public void testScreenshotOnFailure() {
+        System.out.println("This test will fail and trigger the screenshot capture.");
+        Assert.assertTrue(false); // This assertion will fail
+    }
 
 
     @Test
